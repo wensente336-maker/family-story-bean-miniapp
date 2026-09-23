@@ -1,0 +1,26 @@
+{
+  "evaluated_at": "2026-09-20",
+  "scope": "single authorized local demo recording",
+  "podcast_id": "dce2fd76-d366-4cf9-a2f9-dc8c7ff753e2",
+  "version": 2,
+  "selected_moments": 1,
+  "segments": 5,
+  "traceable_original_segments": 1,
+  "duration_ms": 72460,
+  "format": "mp3",
+  "bit_rate": 128125,
+  "sample_rate": 48000,
+  "channels": 1,
+  "mean_volume_db": -16.3,
+  "max_volume_db": -1.9,
+  "render_mode": "narrated",
+  "tts_provider": "macos-system-voice",
+  "voice_clone": false,
+  "music_source": "generated-two-tone-ambient",
+  "remix_idempotency": "passed: repeated identical v2 request remained v2",
+  "limitations": [
+    "This is one technical demo, not a 30-run production acceptance sample.",
+    "One selected highlight produces a 72-second highlight episode; 2-3 minute validation requires 2-3 selected highlights.",
+    "Production TTS licensing, asynchronous rendering capacity and real-family listening scores remain unvalidated."
+  ]
+}

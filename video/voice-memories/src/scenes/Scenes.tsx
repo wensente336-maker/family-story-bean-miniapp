@@ -1,0 +1,9 @@
+import React from 'react';
+import {Bean,Home,Postcard,Vinyl,Particles,Ball,C,Waves} from '../models';
+export function FamilyScene({f}:any){return <><group position={[1.55,-.10,0]} scale={.95} rotation={[0,-.09+f/2400,0]}><Home f={f}/></group><group position={[1.5,1.25,.8]}><Particles f={f}/></group></>}
+export function FadingScene({f}:any){return <><group position={[1.5,-.2,-.6]} scale={.85} rotation={[0,f/1500,0]}><Home f={f} empty={f>72}/></group><group position={[1.5,1.3,1]}><Particles f={f} fade={Math.max(0,1-f/130)}/></group></>}
+export function ProductScene({f}:any){return <><group position={[1.8,.15,0]} scale={1.40}><Bean f={f}/></group><group position={[1.7,-.2,.4]}><Particles f={f}/></group>{[0,1,2].map(i=><mesh key={i} position={[1.8,.15,-.38]} scale={1+((f/100+i*.3)%1)*.8}><torusGeometry args={[1.6,.008,4,80]}/><meshBasicMaterial color='#cbb58a' transparent opacity={.3}/></mesh>)}</>}
+export function CardScene({f}:any){return <><group position={[1.7,.1,0]} scale={1.03}><Postcard f={f}/></group><group position={[1.7,.1,-.7]}><Particles f={f}/></group></>}
+export function RecordScene({f}:any){return <><group position={[1.8,.12,0]} scale={1.12}><Vinyl f={f}/></group><group position={[1.8,-1.9,.2]} scale={.75}><Waves f={f}/></group></>}
+export function ShareScene({f}:any){return <><group position={[1.9,.03,0]} scale={.88}><Postcard f={f}/></group>{[-1,1].map((s)=><group key={s} position={[1.9+s*1.65,Math.sin(f/36+s)*.15,-.6]} scale={.45}><Postcard f={f+30*s}/></group>)}<group position={[1.9,1.2,.8]}><Particles f={f}/></group></>}
+export function FinaleScene({f}:any){return <><group position={[1.25,.1,-.5]} scale={.96}><Vinyl f={f}/></group><group position={[2.6,-.28,.4]} scale={.70}><Postcard f={f}/></group><group position={[.4,-.85,1.05]} scale={.54}><Bean f={f}/></group></>}

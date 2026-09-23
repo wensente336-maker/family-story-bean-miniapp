@@ -1,0 +1,139 @@
+<view class="page-shell">
+  <view class="topbar">
+    <view>
+      <text class="eyebrow">{{familyName}}</text>
+      <view class="brand-row">
+        <text class="brand">把日常，变成故事</text>
+        <view class="bean-mark"><view class="bean-dot"></view></view>
+      </view>
+    </view>
+    <view class="avatar-stack" aria-label="家庭成员">
+      <view class="avatar avatar-one">爸</view>
+      <view class="avatar avatar-two">妈</view>
+      <view class="avatar avatar-three">满</view>
+    </view>
+  </view>
+
+  <view class="hero-card">
+    <view class="hero-glow hero-glow-one"></view>
+    <view class="hero-glow hero-glow-two"></view>
+    <view class="hero-copy">
+      <view class="privacy-pill"><view class="privacy-dot"></view>仅你的家人可见</view>
+      <text class="hero-title">让今天的笑声，\n成为明天的故事。</text>
+      <text class="hero-subtitle">上传一段 15 分钟内的家庭录音，AI 会帮你找到最值得珍藏的瞬间。</text>
+      <button class="primary-button" bindtap="chooseAudio">
+        <view class="upload-icon"><view class="upload-arrow"></view></view>
+        <text>上传一段录音</text>
+      </button>
+      <text class="hero-hint">支持 MP3 / M4A / WAV · 最长 15 分钟</text>
+    </view>
+    <view class="wave-stage" aria-hidden="true">
+      <view class="recording-bean">
+        <view class="bean-hole"></view>
+        <view class="bean-light"></view>
+      </view>
+      <view class="wave wave-one"></view>
+      <view class="wave wave-two"></view>
+      <view class="wave wave-three"></view>
+      <view class="spark spark-one"></view>
+      <view class="spark spark-two"></view>
+    </view>
+  </view>
+
+  <view class="processing-card">
+    <view class="processing-icon">
+      <view class="mini-wave"><view></view><view></view><view></view><view></view></view>
+    </view>
+    <view class="processing-copy">
+      <view class="processing-title-row">
+        <text class="processing-title">{{processing.title}}</text>
+        <text class="processing-percent">{{processing.progress}}%</text>
+      </view>
+      <text class="processing-detail">{{processing.detail}}</text>
+      <view class="progress-track"><view class="progress-value" style="width: {{processing.progress}}%;"></view></view>
+    </view>
+  </view>
+
+  <view class="section-heading">
+    <view>
+      <text class="section-kicker">今日发现</text>
+      <text class="section-title">值得留下的时刻</text>
+    </view>
+    <text class="section-action">查看全部</text>
+  </view>
+
+  <scroll-view class="moment-scroll" scroll-x enhanced show-scrollbar="false">
+    <view class="moment-row">
+      <view wx:for="{{moments}}" wx:key="id" class="moment-card {{item.color}}" data-id="{{item.id}}" bindtap="openMoment">
+        <view class="moment-meta">
+          <text class="moment-theme">{{item.theme}}</text>
+          <text class="moment-duration">{{item.duration}}</text>
+        </view>
+        <view class="story-art">
+          <view class="story-sun"></view>
+          <view class="story-person person-left"><view class="person-head"></view><view class="person-body"></view></view>
+          <view class="story-person person-right"><view class="person-head"></view><view class="person-body"></view></view>
+          <view class="story-table"></view>
+        </view>
+        <text class="moment-title">{{item.title}}</text>
+        <text class="moment-quote">“{{item.quote}}”</text>
+        <view class="moment-footer">
+          <view class="play-button">▶</view>
+          <text>听听这一刻</text>
+          <text class="arrow">→</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <view class="section-heading creation-heading">
+    <view>
+      <text class="section-kicker">AI 创作</text>
+      <text class="section-title">把回忆变成作品</text>
+    </view>
+  </view>
+
+  <view class="creation-grid">
+    <view class="creation-card comic-card" data-type="comic" bindtap="openCreation">
+      <view class="creation-icon comic-icon">
+        <view class="comic-frame frame-a"></view>
+        <view class="comic-frame frame-b"></view>
+        <view class="comic-bubble"></view>
+      </view>
+      <text class="creation-title">家庭漫画</text>
+      <text class="creation-subtitle">把金句画成四格故事</text>
+      <text class="creation-link">开始创作 →</text>
+    </view>
+    <view class="creation-card podcast-card" data-type="podcast" bindtap="openCreation">
+      <view class="creation-icon podcast-icon">
+        <view class="podcast-circle"></view>
+        <view class="podcast-line line-a"></view>
+        <view class="podcast-line line-b"></view>
+        <view class="podcast-line line-c"></view>
+      </view>
+      <text class="creation-title">家庭播客</text>
+      <text class="creation-subtitle">让真实笑声成为节目</text>
+      <text class="creation-link">开始创作 →</text>
+    </view>
+  </view>
+
+  <view class="timeline-card" bindtap="openTimeline">
+    <view class="timeline-date">
+      <text class="timeline-month">SEP</text>
+      <text class="timeline-day">16</text>
+    </view>
+    <view class="timeline-copy">
+      <text class="timeline-kicker">家庭成长时间线</text>
+      <text class="timeline-title">有些普通日子，会慢慢发光。</text>
+    </view>
+    <text class="timeline-arrow">›</text>
+  </view>
+
+  <view class="safe-space"></view>
+</view>
+
+<view class="tabbar">
+  <view class="tab active"><view class="tab-home"></view><text>故事</text></view>
+  <view class="tab"><view class="tab-timeline"></view><text>时光</text></view>
+  <view class="tab" bindtap="openFamily"><view class="tab-family"></view><text>家人</text></view>
+</view>

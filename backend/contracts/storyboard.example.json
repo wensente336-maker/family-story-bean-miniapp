@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "pipeline_version": "storyboard-v1",
+  "title": "爸爸把盐当成了糖",
+  "scene": "周日晚上的家庭厨房",
+  "story_type": "家庭趣事",
+  "characters": [
+    {
+      "family_member_id": "55555555-5555-4555-8555-555555555551",
+      "speaker_key": "speaker_a",
+      "display_name": "爸爸"
+    },
+    {
+      "family_member_id": "55555555-5555-4555-8555-555555555552",
+      "speaker_key": "speaker_b",
+      "display_name": "乐乐"
+    }
+  ],
+  "setup": "一家人第一次一起做蛋糕",
+  "turning_point": "乐乐发现爸爸拿错了调料",
+  "ending": "全家大笑后重新开始",
+  "highlight_quote": "爸爸，你做的是海水蛋糕吗？",
+  "emotion_curve": ["期待", "疑惑", "惊讶", "欢乐"],
+  "source_segments": [
+    {
+      "transcript_segment_id": "66666666-6666-4666-8666-666666666666",
+      "start_ms": 124000,
+      "end_ms": 151000,
+      "quote": "爸爸，你做的是海水蛋糕吗？"
+    }
+  ],
+  "sensitive_flags": [],
+  "confidence": 0.91
+}

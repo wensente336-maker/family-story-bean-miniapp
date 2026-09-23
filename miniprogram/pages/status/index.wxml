@@ -1,0 +1,6 @@
+<view class="page">
+  <view class="bean">●</view>
+  <text class="title">{{title}}</text>
+  <text class="detail">{{detail}}</text>
+  <button bindtap="retry">重新进入</button>
+</view>

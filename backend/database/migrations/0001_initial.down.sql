@@ -1,0 +1,13 @@
+BEGIN;
+DROP TABLE IF EXISTS deletion_audits;
+DROP TABLE IF EXISTS jobs;
+DROP TABLE IF EXISTS creations;
+DROP TABLE IF EXISTS moments;
+DROP TABLE IF EXISTS transcript_segments;
+DROP TABLE IF EXISTS recordings;
+DROP TABLE IF EXISTS family_members;
+DROP TABLE IF EXISTS families;
+DROP TABLE IF EXISTS users;
+DROP TYPE IF EXISTS creation_type;
+DROP TYPE IF EXISTS job_stage;
+COMMIT;

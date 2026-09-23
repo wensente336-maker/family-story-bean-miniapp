@@ -1,0 +1,6 @@
+BEGIN;
+
+DROP INDEX IF EXISTS uq_users_phone_hash;
+ALTER TABLE users DROP COLUMN IF EXISTS phone_hash;
+
+COMMIT;

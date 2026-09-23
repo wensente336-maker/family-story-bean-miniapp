@@ -1,0 +1,25 @@
+[project]
+name = "family-story-bean-backend"
+version = "0.1.0"
+description = "家庭故事豆 MVP API 与 AI Worker 骨架"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi==0.116.1",
+  "uvicorn[standard]==0.35.0",
+  "pydantic==2.11.9",
+  "pydantic-settings==2.10.1",
+  "sqlalchemy==2.0.43",
+  "alembic==1.16.5",
+  "psycopg[binary]==3.2.10",
+  "redis==6.4.0",
+  "celery==5.5.3",
+  "httpx==0.28.1",
+  "Pillow==11.3.0"
+]
+
+[project.optional-dependencies]
+test = ["httpx==0.28.1", "pytest==8.4.2"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

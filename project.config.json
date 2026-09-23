@@ -1,0 +1,14 @@
+{
+  "appid": "touristappid",
+  "projectname": "family-story-bean-miniapp",
+  "description": "家庭故事豆微信小程序 MVP",
+  "miniprogramRoot": "miniprogram/",
+  "compileType": "miniprogram",
+  "setting": {
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true,
+    "urlCheck": false
+  }
+}

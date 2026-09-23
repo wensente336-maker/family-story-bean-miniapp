@@ -1,0 +1,35 @@
+# API conventions v1
+
+- API base path: `/v1`.
+- Authenticated routes use `Authorization: Bearer <access-token>`; authentication is implemented in phase 3.
+- Clients may send `X-Request-Id`; the API echoes it in the response header and `meta.request_id`.
+- Browser origins are explicitly configured through `WEB_CORS_ORIGINS`; wildcard origins are not used.
+- Browser clients may read the exposed `X-Request-Id` response header for support and diagnostics.
+- Successful JSON responses use `{ "ok": true, "data": ..., "meta": ... }`.
+- Failed JSON responses use `{ "ok": false, "error": { "code", "message", "retryable", "details" }, "meta": ... }`.
+- IDs are UUID strings. Timestamps are UTC ISO 8601 strings. Durations are integer milliseconds.
+- Breaking contract changes require a new API or schema version; AI outputs also carry `pipeline_version`.
+- Web 登录验证码默认 5 分钟有效、60 秒内不可重复申请，成功验证后立即消费。
+- 手机号不以明文落库；用户表仅保存带服务端密钥的 HMAC 摘要。
+- 录音先创建家庭归属记录，再使用 15 分钟有效的签名 URL 通过 `PUT` 上传原始字节。
+- 上传完成接口以录音 ID 和 SHA-256 幂等；相同完成回调返回同一录音，不重复创建。
+- 浏览器的格式和时长检查仅用于快速反馈，服务端 FFprobe 检查才是可信边界。
+- 上传完成同时返回 `recording` 和幂等创建的 `job`，耗时处理不占用 HTTP 请求。
+- 任务进度通过 `GET /v1/jobs/{job_id}` 或 `GET /v1/recordings/{recording_id}/job` 轮询；页面恢复以服务端状态为准。
+- 重复队列消息依靠任务领取租约幂等跳过；自动重试最多 2 次，最终错误保存在 `error_code` / `error_detail`。
+- 转写只允许录音所属家庭的用户读取和修改；成员映射也必须指向同一家庭。
+- `transcript_segments.text` 是用户可校正文本，`original_text` 保留模型原始结果；修改后提升 `transcript_revision`。
+- 每个转写片段保留毫秒级起止时间、置信度、字词时间戳、说话人键和 `pipeline_version`，供后续高光回溯。
+- 原音回放使用短时签名 token，token 显式限定 `use=play`和对象键，不能用作上传凭证。
+- 说话人 A/B/C 只是声学分组候选，真实身份始终由用户映射或校正。
+- 高光 `storyboard.source_segments` 中每条直接引语必须带转写片段 UUID 和毫秒时间戳；`highlight_quote` 必须与某条来源文本完全一致。
+- 高光用 `candidate / kept / dismissed` 表示用户反馈，不使用删除代替“不保留”，便于评估和后续个性化。
+- 调整高光边界后必须同步重建 `source_segments`、开场、转折、结尾和重点引语，不得保留边界外的直接引语。
+- 同一 `pipeline_version` 和同一转写输入的排序与故事板结构必须确定性一致。
+- 漫画只能从 `selection_state=kept` 的高光创建；同一高光重复请求返回既有漫画，不重复建档。
+- 漫画中只有携带 `source_segment_id` 的 `dialogue` 可显示为家人原话；`narration` 一律标识为 AI 故事旁白。
+- 单格重画只增加目标分镜的 `version`，其他分镜的版本与内容保持不变；作品总版本同步增加。
+- 播客只能选择 1–3 个同一录音中 `selection_state=kept` 的高光，请求顺序即节目顺序。
+- 播客 `narration` 片段是普通合成主持人旁白，不得克隆家庭成员声音；`original` 片段必须绑定高光、转写片段与毫秒边界。
+- 重混请求由高光顺序、开场和片尾共同生成指纹；相同指纹返回已有版本，不重复渲染。
+- TTS 不可用时允许跳过旁白，产出 `original_only` 原声精剪版，但不得丢失原声溯源数据。

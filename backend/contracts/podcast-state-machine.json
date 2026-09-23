@@ -1,0 +1,12 @@
+{
+  "version": "2.0",
+  "initial": "DRAFT",
+  "terminal": ["COMPLETED"],
+  "transitions": {
+    "DRAFT": ["CONFIRMED"],
+    "CONFIRMED": ["DRAFT", "GENERATING"],
+    "GENERATING": ["COMPLETED", "FAILED"],
+    "COMPLETED": [],
+    "FAILED": ["DRAFT", "GENERATING"]
+  }
+}

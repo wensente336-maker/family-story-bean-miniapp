@@ -1,0 +1,5 @@
+BEGIN;
+
+ALTER TABLE recordings DROP COLUMN IF EXISTS source_type;
+
+COMMIT;

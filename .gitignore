@@ -1,0 +1,41 @@
+# System and editor files
+.DS_Store
+
+# Local configuration and secrets; keep safe templates
+.env
+.env.*
+!.env.example
+
+# Python environment and caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage*
+htmlcov/
+
+# Backend runtime data and generated files
+backend/.data/
+backend/output/
+backend/celerybeat-schedule.db*
+
+# Frontend dependencies and build output
+web/node_modules/
+web/dist/
+web/.sites-runtime/
+*.tsbuildinfo
+web/vite.config.js
+web/vite.config.d.ts
+
+# Video project uses a local dependency symlink
+video/voice-memories/node_modules/
+video/voice-memories/public/
+
+# Optional demo media and rendered showcase exports
+samples/
+docs/showcase/
+
+# Local process logs
+*.log

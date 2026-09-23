@@ -1,0 +1,6 @@
+BEGIN;
+DROP TABLE IF EXISTS comic_panels;
+ALTER TABLE creations
+  DROP COLUMN IF EXISTS metadata,
+  DROP COLUMN IF EXISTS title;
+COMMIT;

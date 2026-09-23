@@ -1,0 +1,366 @@
+{
+  "dataset": "synthetic-family-highlight-v1",
+  "families": 10,
+  "recordings": 50,
+  "gold_origin": "synthetic scenario labels; not human double annotation",
+  "top3_hits": 50,
+  "top3_hit_rate": 1.0,
+  "direct_quotes": 440,
+  "traceable_quotes": 440,
+  "traceability_rate": 1.0,
+  "fabricated_quotes": 0,
+  "stable_same_input": true,
+  "elapsed_seconds": 0.0093,
+  "results": [
+    {
+      "family": 1,
+      "recording": 1,
+      "category": "欢乐",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 1,
+      "recording": 2,
+      "category": "温暖",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 1,
+      "recording": 3,
+      "category": "成长",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 1,
+      "recording": 4,
+      "category": "童言",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 1,
+      "recording": 5,
+      "category": "回忆",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 2,
+      "recording": 1,
+      "category": "欢乐",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 2,
+      "recording": 2,
+      "category": "温暖",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 2,
+      "recording": 3,
+      "category": "成长",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 2,
+      "recording": 4,
+      "category": "童言",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 2,
+      "recording": 5,
+      "category": "回忆",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 3,
+      "recording": 1,
+      "category": "欢乐",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 3,
+      "recording": 2,
+      "category": "温暖",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 3,
+      "recording": 3,
+      "category": "成长",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 3,
+      "recording": 4,
+      "category": "童言",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 3,
+      "recording": 5,
+      "category": "回忆",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 4,
+      "recording": 1,
+      "category": "欢乐",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 4,
+      "recording": 2,
+      "category": "温暖",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 4,
+      "recording": 3,
+      "category": "成长",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 4,
+      "recording": 4,
+      "category": "童言",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 4,
+      "recording": 5,
+      "category": "回忆",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 5,
+      "recording": 1,
+      "category": "欢乐",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 5,
+      "recording": 2,
+      "category": "温暖",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 5,
+      "recording": 3,
+      "category": "成长",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 5,
+      "recording": 4,
+      "category": "童言",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 5,
+      "recording": 5,
+      "category": "回忆",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 6,
+      "recording": 1,
+      "category": "欢乐",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 6,
+      "recording": 2,
+      "category": "温暖",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 6,
+      "recording": 3,
+      "category": "成长",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 6,
+      "recording": 4,
+      "category": "童言",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 6,
+      "recording": 5,
+      "category": "回忆",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 7,
+      "recording": 1,
+      "category": "欢乐",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 7,
+      "recording": 2,
+      "category": "温暖",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 7,
+      "recording": 3,
+      "category": "成长",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 7,
+      "recording": 4,
+      "category": "童言",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 7,
+      "recording": 5,
+      "category": "回忆",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 8,
+      "recording": 1,
+      "category": "欢乐",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 8,
+      "recording": 2,
+      "category": "温暖",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 8,
+      "recording": 3,
+      "category": "成长",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 8,
+      "recording": 4,
+      "category": "童言",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 8,
+      "recording": 5,
+      "category": "回忆",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 9,
+      "recording": 1,
+      "category": "欢乐",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 9,
+      "recording": 2,
+      "category": "温暖",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 9,
+      "recording": 3,
+      "category": "成长",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 9,
+      "recording": 4,
+      "category": "童言",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 9,
+      "recording": 5,
+      "category": "回忆",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 10,
+      "recording": 1,
+      "category": "欢乐",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 10,
+      "recording": 2,
+      "category": "温暖",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 10,
+      "recording": 3,
+      "category": "成长",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 10,
+      "recording": 4,
+      "category": "童言",
+      "top3_hit": true,
+      "moments": 3
+    },
+    {
+      "family": 10,
+      "recording": 5,
+      "category": "回忆",
+      "top3_hit": true,
+      "moments": 3
+    }
+  ]
+}

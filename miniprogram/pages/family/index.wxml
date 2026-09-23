@@ -1,0 +1,30 @@
+<view class="page">
+  <view class="hero">
+    <text class="eyebrow">FAMILY SPACE</text>
+    <text class="title">{{mode === 'create' ? '先创建你们的家庭' : '管理家庭空间'}}</text>
+    <text class="intro">录音、高光、漫画和播客只属于这个家庭。</text>
+  </view>
+
+  <view class="card">
+    <text class="label">家庭名称</text>
+    <input class="input" value="{{familyName}}" maxlength="40" placeholder="例如：小满一家" bindinput="onFamilyName" />
+    <block wx:if="{{mode === 'create'}}">
+      <text class="label">你在家里的昵称</text>
+      <input class="input" value="{{ownerNickname}}" maxlength="24" placeholder="例如：妈妈" bindinput="onOwnerNickname" />
+    </block>
+    <button class="primary" loading="{{saving}}" bindtap="saveFamily">{{mode === 'create' ? '创建家庭' : '保存家庭名称'}}</button>
+    <text class="error" wx:if="{{error}}">{{error}}</text>
+  </view>
+
+  <view class="card" wx:if="{{mode === 'manage' && family}}">
+    <text class="section-title">家庭成员</text>
+    <view class="member" wx:for="{{family.members}}" wx:key="id">
+      <view class="avatar">{{item.nickname}}</view>
+      <text>{{item.nickname}}</text>
+    </view>
+    <view class="add-row">
+      <input class="input compact" value="{{memberNickname}}" maxlength="24" placeholder="添加一个家庭昵称" bindinput="onMemberNickname" />
+      <button class="add" bindtap="addMember">添加</button>
+    </view>
+  </view>
+</view>

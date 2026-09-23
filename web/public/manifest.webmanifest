@@ -1,0 +1,12 @@
+{
+  "name": "家庭故事豆",
+  "short_name": "故事豆",
+  "description": "把家庭录音变成漫画、播客和成长故事。",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f0e8",
+  "theme_color": "#123c3d",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

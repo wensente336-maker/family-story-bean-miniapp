@@ -1,0 +1,209 @@
+{
+  "provider": "mlx_whisper",
+  "model": "whisper-base-mlx",
+  "samples": 20,
+  "passed": 20,
+  "success_rate": 1.0,
+  "results": [
+    {
+      "id": "speech-00",
+      "file": "speech-00.wav",
+      "expect_speech": true,
+      "category": "adult_clean",
+      "passed": true,
+      "segments": 1,
+      "elapsed_seconds": 3.637,
+      "error": null
+    },
+    {
+      "id": "speech-01",
+      "file": "speech-01.wav",
+      "expect_speech": true,
+      "category": "adult_clean",
+      "passed": true,
+      "segments": 1,
+      "elapsed_seconds": 0.17,
+      "error": null
+    },
+    {
+      "id": "speech-02",
+      "file": "speech-02.wav",
+      "expect_speech": true,
+      "category": "adult_clean",
+      "passed": true,
+      "segments": 1,
+      "elapsed_seconds": 0.176,
+      "error": null
+    },
+    {
+      "id": "speech-03",
+      "file": "speech-03.wav",
+      "expect_speech": true,
+      "category": "child_pitch",
+      "passed": true,
+      "segments": 1,
+      "elapsed_seconds": 0.133,
+      "error": null
+    },
+    {
+      "id": "speech-04",
+      "file": "speech-04.wav",
+      "expect_speech": true,
+      "category": "adult_clean",
+      "passed": true,
+      "segments": 1,
+      "elapsed_seconds": 0.172,
+      "error": null
+    },
+    {
+      "id": "speech-05",
+      "file": "speech-05.wav",
+      "expect_speech": true,
+      "category": "adult_clean",
+      "passed": true,
+      "segments": 1,
+      "elapsed_seconds": 0.135,
+      "error": null
+    },
+    {
+      "id": "speech-06",
+      "file": "speech-06.wav",
+      "expect_speech": true,
+      "category": "adult_clean",
+      "passed": true,
+      "segments": 1,
+      "elapsed_seconds": 0.162,
+      "error": null
+    },
+    {
+      "id": "speech-07",
+      "file": "speech-07.wav",
+      "expect_speech": true,
+      "category": "adult_clean",
+      "passed": true,
+      "segments": 1,
+      "elapsed_seconds": 0.121,
+      "error": null
+    },
+    {
+      "id": "speech-08",
+      "file": "speech-08.wav",
+      "expect_speech": true,
+      "category": "child_pitch",
+      "passed": true,
+      "segments": 1,
+      "elapsed_seconds": 0.138,
+      "error": null
+    },
+    {
+      "id": "speech-09",
+      "file": "speech-09.wav",
+      "expect_speech": true,
+      "category": "adult_clean",
+      "passed": true,
+      "segments": 1,
+      "elapsed_seconds": 0.154,
+      "error": null
+    },
+    {
+      "id": "speech-10",
+      "file": "speech-10.wav",
+      "expect_speech": true,
+      "category": "adult_clean",
+      "passed": true,
+      "segments": 1,
+      "elapsed_seconds": 0.131,
+      "error": null
+    },
+    {
+      "id": "speech-11",
+      "file": "speech-11.wav",
+      "expect_speech": true,
+      "category": "adult_clean",
+      "passed": true,
+      "segments": 1,
+      "elapsed_seconds": 0.161,
+      "error": null
+    },
+    {
+      "id": "speech-12",
+      "file": "speech-12.wav",
+      "expect_speech": true,
+      "category": "adult_clean",
+      "passed": true,
+      "segments": 1,
+      "elapsed_seconds": 0.122,
+      "error": null
+    },
+    {
+      "id": "speech-13",
+      "file": "speech-13.wav",
+      "expect_speech": true,
+      "category": "child_pitch",
+      "passed": true,
+      "segments": 1,
+      "elapsed_seconds": 0.136,
+      "error": null
+    },
+    {
+      "id": "noise-00",
+      "file": "noise-00.wav",
+      "expect_speech": true,
+      "category": "background_noise",
+      "passed": true,
+      "segments": 1,
+      "elapsed_seconds": 0.146,
+      "error": null
+    },
+    {
+      "id": "noise-01",
+      "file": "noise-01.wav",
+      "expect_speech": true,
+      "category": "background_noise",
+      "passed": true,
+      "segments": 1,
+      "elapsed_seconds": 0.16,
+      "error": null
+    },
+    {
+      "id": "noise-02",
+      "file": "noise-02.wav",
+      "expect_speech": true,
+      "category": "background_noise",
+      "passed": true,
+      "segments": 1,
+      "elapsed_seconds": 0.124,
+      "error": null
+    },
+    {
+      "id": "noise-03",
+      "file": "noise-03.wav",
+      "expect_speech": true,
+      "category": "background_noise",
+      "passed": true,
+      "segments": 1,
+      "elapsed_seconds": 0.134,
+      "error": null
+    },
+    {
+      "id": "overlap",
+      "file": "overlap.wav",
+      "expect_speech": true,
+      "category": "overlap",
+      "passed": true,
+      "segments": 2,
+      "elapsed_seconds": 0.159,
+      "error": null
+    },
+    {
+      "id": "silence",
+      "file": "silence.wav",
+      "expect_speech": false,
+      "category": "no_speech",
+      "passed": true,
+      "segments": 0,
+      "elapsed_seconds": 0.633,
+      "error": null
+    }
+  ]
+}
